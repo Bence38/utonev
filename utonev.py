@@ -19,6 +19,7 @@ f.readline()
 for sor in f :
     tmp = sor.strip().split(';')
     utonevek.append(Nev(tmp[0], tmp[1], tmp[2], tmp[3],tmp[4], tmp[5]))
+    db += 1
 for utonev in utonevek:
     print(utonev)
 
