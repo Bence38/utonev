@@ -13,6 +13,9 @@ utonevek = []
 ferfi = 0
 no = 0
 db = 0
+ujszulottf = 0
+ujszulottn = 0
+
 f = open('UTONEV.TXT', 'rt' , encoding = 'ansi')
 f.readline()
 
@@ -36,7 +39,20 @@ for no in utonevek:
         if no.elso != '':
             nfo += int(no.elso)
 print(f"{nfo} nő volt")
+fiu = 0
+for ujszulottf in utonevek:
+    if ujszulottf.nem == 'F':
+        if ujszulottf.elso != '':
+            fiu += int(ujszulottf.elso)
+print(f"{fiu} fiú újszülött volt")
+lany =0
+for ujszulottn in utonevek:
+    if ujszulottn.nem == 'N':
+        if ujszulottn.elso != '':
+            lany += int(ujszulottn.elso)
+print(f"{lany} lány újszülött volt")
 
 print(f"{ffo + nfo} volt a népesség száma")
+print(f"{lany -fiu } újszülöttek száma")
 
 print(f"{db} utónévről van adat")
